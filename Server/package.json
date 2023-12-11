@@ -1,0 +1,19 @@
+{
+  "name": "travel_dairy",
+  "version": "1.0.0",
+  "description": "recommend travel places",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhijith1001/Travel_dairy.git"
+  },
+  "author": "abhijith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhijith1001/Travel_dairy/issues"
+  },
+  "homepage": "https://github.com/Abhijith1001/Travel_dairy#readme"
+}
