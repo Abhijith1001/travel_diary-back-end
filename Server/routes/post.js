@@ -26,4 +26,15 @@ router.get('/getposts', authenticateUser, async (req, res) => {
     }
 });
 
+router.get('/get/searchuser/post/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId
+        const searchuserpost = await Post.find({userId:userId})
+        res.json(searchuserpost)
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+})
+
 module.exports = router;
