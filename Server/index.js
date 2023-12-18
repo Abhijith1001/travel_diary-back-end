@@ -6,6 +6,7 @@ const userSignupRoutes = require("./routes/signup");
 const userSigninRoutes = require("./routes/signin");
 const userPostRoutes = require("./routes/post");
 const userRoutes = require("./routes/search")
+const followingusercontent = require('./routes/followingcontent')
 
 
 
@@ -21,6 +22,8 @@ app.use("/signup", userSignupRoutes);
 app.use("/signin", userSigninRoutes);
 app.use("/post", userPostRoutes);
 app.use('/user',userRoutes)
+app.use('/followinguser',followingusercontent)
+
 
 
 
