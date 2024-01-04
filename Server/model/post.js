@@ -6,6 +6,10 @@ const postSchema = new mongoose.Schema({
     ref: "User",
   },
   content: String,
+  followers: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }]
 });
 
 const Post = mongoose.model("Post", postSchema);
