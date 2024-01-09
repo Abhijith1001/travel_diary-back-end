@@ -19,13 +19,13 @@ router.get('/following/content/:userId', async (req, res) => {
         const followingIds = user.following.map(following => following._id);
 
         // Log the followingIds for debugging
-        console.log('Following IDs:', followingIds);
+        // console.log('Following IDs:', followingIds);
 
         // Retrieve posts from users who are being followed
         const feeds = await Post.find({ userId: { $in: followingIds } }).populate('userId', 'userName');
 
         // Log the retrieved feeds for debugging
-        console.log('Feeds:', feeds);
+        // console.log('Feeds:', feeds);
 
         res.json(feeds);
     } catch (error) {
